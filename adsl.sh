@@ -19,13 +19,13 @@ mkdir /home/wang
 cd /home/wang
 mkdir python3
 cd python3
-yum install zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel lrzsz << EOF
+yum install zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel lrzsz gcc libffi-devel << EOF
 y
 EOF
-wget https://www.python.org/ftp/python/3.6.5/Python-3.6.5.tgz
-tar -zxvf Python-3.6.5.tgz
+wget https://www.python.org/ftp/python/3.7.2/Python-3.7.2.tgz
+tar -zxvf Python-3.7.2.tgz
 mkdir /usr/local/python3
-cd Python-3.6.5
+cd Python-3.7.2
 ./configure --prefix=/usr/local/python3
 make && make install
 ln -s /usr/local/python3/bin/python3 /usr/bin/python3
