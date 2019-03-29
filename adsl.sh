@@ -1,5 +1,7 @@
 #!/bin/sh
 
+start=$(date "+%s")
+
 # 安装tinyproxy
 yum install -y epel-release
 yum update -y
@@ -33,3 +35,7 @@ ln -s /usr/local/python3/bin/pip3 /usr/bin/pip3
 
 # Python需要安装的库
 pip3 install redis requests tornado
+
+now=$(date "+%s")
+time=$((now-start))
+echo "time used: $time seconds"
